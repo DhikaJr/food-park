@@ -62,7 +62,11 @@
                     <a class="cart_icon"><i class="fas fa-shopping-basket"></i> <span>5</span></a>
                 </li>
                 <li>
-                    <a href="dashboard.html"><i class="fas fa-user"></i></a>
+                    @auth
+                        <a href="{{ route('dashboard') }}"><i class="fas fa-user"></i></a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+                    @endauth
                 </li>
                 <li>
                     <a class="common_btn" href="#" data-bs-toggle="modal"

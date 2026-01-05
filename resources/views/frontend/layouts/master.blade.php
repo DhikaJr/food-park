@@ -93,6 +93,17 @@
     <!--main/custom js-->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
 
+    <script>
+        $(document).ready(function() {
+            toastr.options.closeButton = true;
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    toastr.error('{{ $error }}');
+                @endforeach
+            @endif
+        });
+    </script>
+
 </body>
 
 </html>
