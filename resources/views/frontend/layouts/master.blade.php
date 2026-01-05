@@ -96,6 +96,7 @@
     <script>
         $(document).ready(function() {
             toastr.options.closeButton = true;
+            toastr.options.progressBar = true;
             @if ($errors->any())
                 @foreach ($errors->all() as $error)
                     toastr.error('{{ $error }}');
