@@ -143,7 +143,7 @@
                             </li>
                             <li><hr class="dropdown-divider"></li>
                             <li>
-                                <form method="POST" action="{{ route('logout') }}">
+                                <form method="POST" action="{{ route('admin.logout') }}">
                                     @csrf
                                     <a href="javascript:void(0);" onclick="event.preventDefault(); this.closest('form').submit();" class="dropdown-item">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bs-danger)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

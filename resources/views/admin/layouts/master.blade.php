@@ -33,6 +33,7 @@
 	<link href="{{ asset('admin/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('admin/assets/vendor/dropzone/dropzone.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('admin/assets/vendor/clockpicker/css/bootstrap-clockpicker.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/toastr/css/toastr.min.css') }}">
 
 	<!-- Start - Style CSS -->
 	<link class="main-plugins" href="{{ asset('admin/assets/css/plugins.css') }}" rel="stylesheet">
@@ -774,6 +775,18 @@
 	</div>
 	<!-- End - Main Wrapper -->
 
+    <!-- Toastr Script -->
+    <script>
+        $(document).ready(function() {
+            toastr.options.closeButton = true;
+            toastr.options.progressBar = true;
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    toastr.error('{{ $error }}');
+                @endforeach
+            @endif
+        });
+    </script>
 
 	<!-- Start - Page Scripts -->
 	<script src="{{ asset('admin/assets/vendor/jquery/dist/jquery.min.js') }}"></script>
@@ -804,6 +817,9 @@
 
 	<!-- Script For Datatables -->
 	<script src="{{ asset('admin/assets/vendor/datatables/js/jquery.dataTables.bundle.min.js') }}"></script>
+
+    <!-- Script For Toastr -->
+    <script src="{{ asset('frontend/js/toastr.min.js') }}"></script>
 
 	<!-- Script For Dashboard -->
 	<script src="{{ asset('admin/assets/js/dashboard/dashboard.js') }}"></script>
