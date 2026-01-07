@@ -32,9 +32,8 @@
                                     <div class="col-xl-12">
                                         <div class="fp__login_imput fp__login_check_area">
                                             <div class="form-check">
-                                                <input id="remember_me" class="form-check-input" type="checkbox"
-                                                    id="flexCheckDefault" name="remember">
-                                                <label for="remember_me" class="form-check-label" for="flexCheckDefault">
+                                                <input id="remember_me" class="form-check-input" type="checkbox" name="remember" style="position: relative;z-index: 2;">
+                                                <label for="remember_me" class="form-check-label">
                                                     Ingat Saya
                                                 </label>
                                             </div>
