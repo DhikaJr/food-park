@@ -23,6 +23,8 @@
 
 <body>
 
+    @include('sweetalert::alert')
+
     <!--=============================
         TOPBAR START
     ==============================-->
@@ -93,6 +95,7 @@
     <!--main/custom js-->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
 
+    <!-- Toastr Script -->
     <script>
         $(document).ready(function() {
             toastr.options.closeButton = true;

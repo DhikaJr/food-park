@@ -42,6 +42,8 @@
 </head>
 <body>
 
+    @include('sweetalert::alert')
+
 	<!-- Start - Preloader -->
 	<div id="preloader">
 		<div class="lds-ripple">
